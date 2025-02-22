@@ -1,0 +1,44 @@
+<%- layout("/layouts/boilerplate.ejs") %>
+
+<div class="row mt-4">
+  
+  <form
+    action="/signup"
+    method="post"
+    class="needs-validation  p-4 col-lg-6 col-md-8 col-sm-10 offset-lg-3 offset-md-2"
+    novalidate
+  ><%-include("../includes/flash.ejs") %>
+  
+    <h4 class="mb-3 text-center">Signup form</h4>
+    <div class="mb-3">
+      <label for="user" class="form-label">username</label>
+      <input type="text" name="username" id="user" class="form-control" required/>
+      <div class="invalid-feedback">
+        username is required
+      </div>
+    </div>
+    <div class="mb-3">
+      <label for="email" class="form-label">email</label>
+      <input type="email" name="email" id="email" class="form-control" required/>
+      <div class="invalid-feedback">
+        email is required
+      </div>
+    </div>
+    <div class="mb-3">
+      <label for="password" class="form-label">password</label>
+      <input
+        type="password"
+        name="password"
+        id="password"
+        class="form-control"
+        required
+      />
+      <div class="invalid-feedback">
+        password is required
+      </div>
+    </div>
+    <div class="mb-3">
+      <button class="btn btn-danger">Signup</button>
+    </div>
+  </form>
+</div>
